@@ -5,7 +5,7 @@ import pandas as pd
 
 def get_list_of_links():
     links = pd.read_csv('../cleaned_data/full_links.csv')
-    links = links['full_link']
+    links = links['link']
     return links
 
 
@@ -27,7 +27,7 @@ def create_csv():
         elevations.append(elevation)
         links.append(link)
     elevations_df = pd.DataFrame({'link': links, 'elevation': elevations})
-    elevations_df.to_csv('../raw_data/elevations.csv', index=False)
+    elevations_df.to_csv('../raw_data/elevations_sss.csv', index=False)
 
 
 if __name__ == '__main__':
